@@ -1,0 +1,15 @@
+{
+  "name": "entries",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node convert.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "plist": "^3.0.1"
+  }
+}
