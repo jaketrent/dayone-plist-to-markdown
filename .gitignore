@@ -1,4 +1,5 @@
 *.doentry
 entries
 photos
+dist
 node_modules

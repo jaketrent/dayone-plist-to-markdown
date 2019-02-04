@@ -1,23 +1,8 @@
-const fs = require("fs");
 const path = require("path");
-const plist = require("plist");
 
-function getFileContents(filePath) {
-  return fs.readFileSync(filePath, "utf8");
-}
+const lib = require("./lib.js");
 
-function getFiles(dirPath) {
-  return fs.readdirSync(dirPath);
-}
+const entriesPath = path.join(__dirname, "entries");
+const outputPath = path.join(__dirname, "dist");
 
-function parseContents(contents) {
-  return plist.parse(contents);
-}
-
-const filesPaths = getFiles(__dirname).slice(0, 1);
-
-filesPaths.forEach(filePath => {
-  const contents = getFileContents(filePath);
-  const stuff = parseContents(contents);
-  console.log({ stuff });
-});
+lib.convert(entriesPath, outputPath);
