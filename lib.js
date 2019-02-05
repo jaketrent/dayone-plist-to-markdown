@@ -58,7 +58,7 @@ function formatDate(dayOneEntry) {
 function formatTags(dayOneEntry) {
   return (dayOneEntry.Tags || [])
     .map(tag => tag.toLowerCase().replace(/ /, "-"))
-    .map(tag => '"' + tag + '"')
+    .map(tag => '"+' + tag + '"')
     .join(", ");
 }
 

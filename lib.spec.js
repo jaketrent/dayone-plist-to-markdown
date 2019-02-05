@@ -25,7 +25,7 @@ describe("#formatTags", () => {
   it("combines tags", () => {
     expect(
       lib.formatTags({ Tags: ["Wow", "smiles", "felt plastered"] })
-    ).toEqual('"wow", "smiles", "felt-plastered"');
+    ).toEqual('"+wow", "+smiles", "+felt-plastered"');
   });
 });
 
